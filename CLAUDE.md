@@ -55,9 +55,24 @@ Die gesamte Website lebt in einer einzigen `index.html` (~1280 Zeilen) mit drei 
 
 ## Kontaktdaten auf der Seite
 
-- E-Mail: julio@brinkmann-solutions.de
+- E-Mail: jb@brinkmann-solutions.de
 - Standort: München, Deutschland
 - Inhaber: Julio Benjamin Brinkmann
+
+## Firma / Rechtliche Angaben
+
+Brinkmann Solutions ist eine Marke/Tätigkeit von Julio Brinkmann. Die Abrechnung der IT-Beratung erfolgt über seine Firma:
+
+- **Firma:** sueco UG (haftungsbeschränkt)
+- **Adresse:** Schleißheimer Straße 23, 80333 München
+- **Geschäftsführer:** Julio Brinkmann
+- **Registergericht:** Amtsgericht München
+- **Handelsregisternummer:** HRB 201489
+- **USt-IdNr:** DE285741287
+- **Telefon:** 089 / 443 823 73
+- **E-Mail (Firma):** info@sueco.de
+
+Diese Angaben sind für Impressum und AGB der Website zu verwenden.
 
 ## Aufgaben-Tracking
 

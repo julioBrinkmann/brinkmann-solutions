@@ -1,16 +1,16 @@
 # STATUS – Brinkmann Solutions Website
 
-Letzte Aktualisierung: 2026-02-26
+Letzte Aktualisierung: 2026-02-27
 
 ## In Arbeit
 
-_(aktuell nichts)_
+- [ ] **HTTPS aktivieren** – DNS-Check bei GitHub Pages läuft, danach "Enforce HTTPS" aktivieren (DNS-Einträge am 27.02. gesetzt)
 
 ## Offen – Priorität hoch
 
-- [ ] **GitHub Repo erstellen & ersten Commit pushen** – `gh repo create` oder manuell auf github.com
-- [ ] **Custom Domain verbinden** – CNAME-Eintrag beim Domain-Anbieter auf GitHub Pages zeigen
-- [ ] **Impressum erstellen** – Pflichtangaben nach § 5 TMG (separate HTML-Seite, Footer-Link aktualisieren)
+- [x] **E-Mail-Adresse auf Website austauschen** – `julio@brinkmann-solutions.de` durch `jb@brinkmann-solutions.de` in `index.html` ersetzt
+- [x] **Impressum erstellen** – `impressum.html` mit Pflichtangaben nach § 5 DDG, Footer-Link aktualisiert
+- [x] **AGB erstellen** – `agb.html` mit 10 Paragraphen für IT-Beratung (B2B), Footer-Link aktualisiert
 - [ ] **Datenschutzerklärung erstellen** – DSGVO-konform, insb. wegen extern geladenem Google Fonts
 
 ## Offen – Priorität mittel
@@ -23,9 +23,7 @@ _(aktuell nichts)_
 
 ## Offen – Priorität niedrig
 
-- [ ] **E-Mail-Alias einrichten** – julio@brinkmann-solutions.de als Alias im M365 Tenant
 - [ ] **Copyright-Jahr aktualisieren** – Footer zeigt noch 2025
-- [ ] **GitHub CLI installieren** – Für Repo-Management direkt aus dem Terminal
 
 ## Erledigt
 
@@ -35,3 +33,8 @@ _(aktuell nichts)_
 - [x] CLAUDE.md für Claude Code erstellt
 - [x] Git Repository initialisiert
 - [x] Live Server Extension installiert
+- [x] GitHub Repo erstellt & auf GitHub gepusht (github.com/julioBrinkmann/brinkmann-solutions)
+- [x] Custom Domain verbunden (CNAME: www.brinkmann-solutions.de)
+- [x] GitHub CLI installiert & authentifiziert (gh v2.87.3)
+- [x] E-Mail-Adresse eingerichtet – `jb@brinkmann-solutions.de` als Shared Mailbox in M365 (DNS: MX, CNAME, TXT/SPF gesetzt)
+- [x] Impressum & AGB erstellt (`impressum.html`, `agb.html`) und Footer-Links verknüpft

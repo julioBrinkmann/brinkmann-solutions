@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Allgemeine Geschäftsbedingungen – Brinkmann Solutions, IT-Beratung München.">
+    <meta name="robots" content="noindex, follow">
+    <title>AGB – Brinkmann Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #0C0C0C;
+            --charcoal: #1A1A1A;
+            --warm-dark: #2C2824;
+            --copper: #B8784E;
+            --copper-light: #D4956A;
+            --cream: #F5F0EB;
+            --warm-white: #FAF8F5;
+            --warm-gray: #A39E97;
+            --mid-gray: #6B6660;
+            --light-line: rgba(12, 12, 12, 0.08);
+            --white: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            color: var(--black);
+            background: var(--warm-white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.025;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 200px;
+        }
+
+        /* ─── NAVIGATION ─── */
+        nav {
+            padding: 2rem 3rem;
+            background: rgba(250, 248, 245, 0.92);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border-bottom: 1px solid var(--light-line);
+        }
+
+        .nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.5rem;
+            color: var(--black);
+            text-decoration: none;
+            letter-spacing: -0.03em;
+        }
+
+        .nav-back {
+            text-decoration: none;
+            color: var(--mid-gray);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-back:hover {
+            color: var(--black);
+        }
+
+        .nav-back svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* ─── CONTENT ─── */
+        .legal-content {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 5rem 3rem 6rem;
+        }
+
+        .legal-content .section-num {
+            font-family: 'Instrument Serif', serif;
+            font-size: 0.9rem;
+            color: var(--copper);
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-content h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(2.2rem, 3.5vw, 3rem);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-content .legal-intro {
+            font-size: 0.95rem;
+            line-height: 1.85;
+            color: var(--mid-gray);
+            font-weight: 300;
+            margin-bottom: 3rem;
+        }
+
+        .legal-content h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        .legal-content h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+        }
+
+        .legal-content p {
+            font-size: 0.95rem;
+            line-height: 1.85;
+            color: var(--warm-dark);
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .legal-content ol {
+            list-style: none;
+            counter-reset: item;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        .legal-content ol li {
+            font-size: 0.95rem;
+            line-height: 1.85;
+            color: var(--warm-dark);
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            padding-left: 2rem;
+            position: relative;
+            counter-increment: item;
+        }
+
+        .legal-content ol li::before {
+            content: counter(item) ".";
+            position: absolute;
+            left: 0;
+            color: var(--copper);
+            font-weight: 500;
+        }
+
+        .legal-content a {
+            color: var(--copper);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .legal-content a:hover {
+            color: var(--copper-light);
+        }
+
+        .legal-content strong {
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        .legal-divider {
+            border: none;
+            border-top: 1px solid var(--light-line);
+            margin: 2.5rem 0;
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            background: var(--charcoal);
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 2rem 3rem;
+        }
+
+        .footer-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer p, footer a {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.25);
+        }
+
+        footer a {
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 640px) {
+            nav {
+                padding: 1.5rem 1.5rem;
+            }
+
+            .legal-content {
+                padding: 3rem 1.5rem 4rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="logo">Brinkmann Solutions</a>
+        <a href="index.html" class="nav-back">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"/></svg>
+            Zurück
+        </a>
+    </div>
+</nav>
+
+<!-- ─── AGB ─── -->
+<main class="legal-content">
+    <span class="section-num">Rechtliches</span>
+    <h1>Allgemeine Geschäftsbedingungen</h1>
+    <p class="legal-intro">der sueco UG (haftungsbeschränkt), Schleißheimer Straße 23, 80333 München – nachfolgend „Auftragnehmer" – für IT-Beratungsleistungen im Bereich Data Analytics, Business Intelligence und Digitalisierung unter der Marke „Brinkmann Solutions".</p>
+
+    <h2>§ 1 Geltungsbereich</h2>
+    <ol>
+        <li>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen dem Auftragnehmer und seinen Auftraggebern (nachfolgend „Auftraggeber") über die Erbringung von Beratungs- und Dienstleistungen im Bereich IT-Consulting, Data Analytics, Business Intelligence, CRM-Implementierung und verwandter Digitalisierungsleistungen.</li>
+        <li>Es gelten ausschließlich diese AGB. Abweichende, entgegenstehende oder ergänzende Geschäftsbedingungen des Auftraggebers werden nur dann Vertragsbestandteil, wenn der Auftragnehmer ihrer Geltung ausdrücklich schriftlich zugestimmt hat.</li>
+        <li>Diese AGB gelten nur gegenüber Unternehmern im Sinne des § 14 BGB, juristischen Personen des öffentlichen Rechts und öffentlich-rechtlichen Sondervermögen.</li>
+    </ol>
+
+    <h2>§ 2 Vertragsgegenstand</h2>
+    <ol>
+        <li>Der Auftragnehmer erbringt für den Auftraggeber Beratungs- und Implementierungsleistungen in den Bereichen Power BI, Microsoft Fabric, Dynamics 365, KI-Beratung, Prozessautomatisierung und verwandte Dienstleistungen.</li>
+        <li>Art und Umfang der Leistungen ergeben sich aus dem jeweiligen Angebot bzw. der individuellen Leistungsbeschreibung, die dem Vertrag zugrunde liegt.</li>
+        <li>Der Auftragnehmer schuldet die vereinbarte Leistung, nicht einen bestimmten wirtschaftlichen Erfolg, sofern nicht ausdrücklich ein Werkvertrag vereinbart wird.</li>
+    </ol>
+
+    <h2>§ 3 Angebot und Vertragsschluss</h2>
+    <ol>
+        <li>Angebote des Auftragnehmers sind freibleibend und unverbindlich, sofern sie nicht ausdrücklich als verbindlich gekennzeichnet sind.</li>
+        <li>Der Vertrag kommt durch schriftliche Auftragsbestätigung des Auftragnehmers oder durch Beginn der Leistungserbringung zustande.</li>
+        <li>Änderungen und Ergänzungen des Vertrages bedürfen der Schriftform. Dies gilt auch für die Aufhebung dieses Schriftformerfordernisses.</li>
+    </ol>
+
+    <h2>§ 4 Leistungserbringung und Mitwirkungspflichten</h2>
+    <ol>
+        <li>Der Auftragnehmer erbringt seine Leistungen nach den Grundsätzen ordnungsgemäßer Berufsausübung. Er ist in der Gestaltung seiner Arbeitszeit und seines Arbeitsortes frei, soweit nichts anderes vereinbart ist.</li>
+        <li>Termine und Fristen sind nur dann verbindlich, wenn sie ausdrücklich als solche vereinbart werden.</li>
+        <li>Der Auftraggeber stellt dem Auftragnehmer rechtzeitig alle für die Leistungserbringung erforderlichen Informationen, Unterlagen, Daten und Zugänge zur Verfügung.</li>
+        <li>Verzögert sich die Leistungserbringung aufgrund fehlender oder verspäteter Mitwirkung des Auftraggebers, verlängern sich vereinbarte Fristen entsprechend. Daraus entstehende Mehrkosten trägt der Auftraggeber.</li>
+    </ol>
+
+    <h2>§ 5 Vergütung und Zahlungsbedingungen</h2>
+    <ol>
+        <li>Die Vergütung richtet sich nach dem jeweiligen Angebot. Sofern nicht anders vereinbart, erfolgt die Abrechnung auf Basis von Tagessätzen oder Stundensätzen zuzüglich der gesetzlichen Umsatzsteuer.</li>
+        <li>Reise- und Übernachtungskosten werden, soweit vereinbart, gesondert nach tatsächlichem Aufwand berechnet.</li>
+        <li>Rechnungen sind innerhalb von 14 Tagen nach Rechnungsdatum ohne Abzug zahlbar, sofern nicht anders vereinbart.</li>
+        <li>Gerät der Auftraggeber in Zahlungsverzug, ist der Auftragnehmer berechtigt, Verzugszinsen in Höhe von 9 Prozentpunkten über dem Basiszinssatz (§ 288 Abs. 2 BGB) zu verlangen. Die Geltendmachung eines weitergehenden Verzugsschadens bleibt vorbehalten.</li>
+    </ol>
+
+    <h2>§ 6 Vertraulichkeit und Datenschutz</h2>
+    <ol>
+        <li>Beide Parteien verpflichten sich, alle im Rahmen der Zusammenarbeit erlangten vertraulichen Informationen der jeweils anderen Partei streng vertraulich zu behandeln und weder Dritten zugänglich zu machen noch anderweitig zu verwerten.</li>
+        <li>Diese Verpflichtung besteht über die Beendigung des Vertragsverhältnisses hinaus fort.</li>
+        <li>Soweit personenbezogene Daten im Auftrag verarbeitet werden, schließen die Parteien eine gesonderte Vereinbarung zur Auftragsverarbeitung gemäß Art. 28 DSGVO.</li>
+    </ol>
+
+    <h2>§ 7 Nutzungsrechte und geistiges Eigentum</h2>
+    <ol>
+        <li>An den im Rahmen des Auftrags erstellten Arbeitsergebnissen (Berichte, Dashboards, Konfigurationen, Dokumentationen etc.) räumt der Auftragnehmer dem Auftraggeber nach vollständiger Bezahlung ein einfaches, zeitlich unbeschränktes Nutzungsrecht für den vereinbarten Zweck ein.</li>
+        <li>Vorbestehende Werkzeuge, Methoden, Vorlagen und Know-how des Auftragnehmers verbleiben bei diesem. Dem Auftraggeber wird hieran kein Nutzungsrecht eingeräumt, es sei denn, dies ist für die Nutzung der Arbeitsergebnisse zwingend erforderlich.</li>
+        <li>Der Auftragnehmer darf die Art der erbrachten Leistung in allgemeiner Form zu Referenzzwecken verwenden, sofern der Auftraggeber dem nicht widerspricht.</li>
+    </ol>
+
+    <h2>§ 8 Haftung</h2>
+    <ol>
+        <li>Der Auftragnehmer haftet unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit sowie für vorsätzlich oder grob fahrlässig verursachte Schäden.</li>
+        <li>Bei leichter Fahrlässigkeit haftet der Auftragnehmer nur bei Verletzung wesentlicher Vertragspflichten (Kardinalpflichten). Die Haftung ist in diesem Fall auf den vertragstypischen, vorhersehbaren Schaden begrenzt.</li>
+        <li>Die Haftung für mittelbare Schäden, insbesondere entgangenen Gewinn, ist bei leichter Fahrlässigkeit ausgeschlossen.</li>
+        <li>Die vorstehenden Haftungsbeschränkungen gelten auch zugunsten der Mitarbeiter und Erfüllungsgehilfen des Auftragnehmers.</li>
+    </ol>
+
+    <h2>§ 9 Vertragslaufzeit und Kündigung</h2>
+    <ol>
+        <li>Die Vertragslaufzeit ergibt sich aus der jeweiligen Vereinbarung.</li>
+        <li>Dauerschuldverhältnisse können von jeder Partei mit einer Frist von vier Wochen zum Monatsende ordentlich gekündigt werden, sofern nicht anders vereinbart.</li>
+        <li>Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt. Ein wichtiger Grund liegt insbesondere vor, wenn der Auftraggeber mit der Zahlung von Vergütungen in Höhe von mindestens zwei Monatsraten in Verzug gerät.</li>
+        <li>Kündigungen bedürfen der Schriftform.</li>
+    </ol>
+
+    <h2>§ 10 Schlussbestimmungen</h2>
+    <ol>
+        <li>Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.</li>
+        <li>Gerichtsstand für alle Streitigkeiten aus oder im Zusammenhang mit dem Vertragsverhältnis ist München, sofern der Auftraggeber Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen ist.</li>
+        <li>Sollten einzelne Bestimmungen dieser AGB unwirksam oder undurchführbar sein oder werden, so wird die Wirksamkeit der übrigen Bestimmungen davon nicht berührt. Die Parteien verpflichten sich, die unwirksame Bestimmung durch eine wirksame zu ersetzen, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung am nächsten kommt.</li>
+    </ol>
+
+    <hr class="legal-divider">
+
+    <p>Stand: Februar 2026</p>
+</main>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+    <div class="footer-inner">
+        <p>&copy; 2025 Brinkmann Solutions · Julio Benjamin Brinkmann</p>
+        <div class="footer-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="agb.html">AGB</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
