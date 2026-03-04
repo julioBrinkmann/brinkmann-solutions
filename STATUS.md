@@ -1,10 +1,6 @@
 # STATUS – Brinkmann Solutions Website
 
-Letzte Aktualisierung: 2026-02-27
-
-## In Arbeit
-
-- [ ] **HTTPS aktivieren** – DNS-Check bei GitHub Pages läuft, danach "Enforce HTTPS" aktivieren (DNS-Einträge am 27.02. gesetzt)
+Letzte Aktualisierung: 2026-03-04
 
 ## Offen – Priorität hoch
 
@@ -23,9 +19,10 @@ Letzte Aktualisierung: 2026-02-27
 
 ## Offen – Priorität niedrig
 
-- [ ] **Copyright-Jahr aktualisieren** – Footer zeigt noch 2025
-
 ## Erledigt
+
+- [x] **HTTPS aktivieren** – DNS-Check abgeschlossen, HTTPS aktiv
+- [x] **Copyright-Jahr aktualisieren** – Footer auf 2026 aktualisiert
 
 - [x] Website-Grundstruktur erstellt (One-Pager mit allen Sektionen)
 - [x] Design-System implementiert (Farben, Typografie, Animationen)
