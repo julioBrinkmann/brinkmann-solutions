@@ -13,7 +13,7 @@ Consulting-Website für Julio Benjamin Brinkmann – Data Analytics, Power BI, M
 - **Keine Build-Tools:** Reines HTML/CSS/JS, kein npm, kein Framework
 - **Einzelne Datei:** Alles in `index.html` (CSS und JS inline)
 - **Hosting:** GitHub Pages – keine serverseitigen Features verwenden
-- **Design:** Editorial Minimalism – KEIN generisches AI-Template-Design
+- **Design:** Cool Corporate (Navy/Steel) – KEIN generisches AI-Template-Design. Details in `DESIGN.md`
 
 ## Architektur der index.html
 
@@ -36,22 +36,13 @@ Die gesamte Website lebt in einer einzigen `index.html` (~1280 Zeilen) mit drei 
 
 ## Design-System
 
-### Farben
-- Schwarz: `#0C0C0C`, Charcoal: `#1A1A1A`
-- Kupfer (Akzent): `#B8784E`, Kupfer hell: `#D4956A`
-- Cream: `#F5F0EB`, Warm White: `#FAF8F5`
-- Grautöne: `#A39E97`, `#6B6660`
+Vollständige Dokumentation in `DESIGN.md` (Farben, Typografie, Historie, Anforderungen).
 
-### Typografie
-- Headlines: `Instrument Serif` (Google Fonts)
-- Body: `Manrope` (Google Fonts)
-
-### Animationen
-- Scroll-Reveal nur an gezielten Stellen (Leistungen, Über mich, Referenzen)
-- Zahlen-Counter im Über-mich-Bereich
-- Marquee-Laufband nach Hero (duplizierte Items für nahtlose Schleife)
-- Grain-Overlay via SVG-Noise auf `body::after`
-- Keine übertriebenen Animationen – dezent und professionell
+### Kurzreferenz (aktiv: Cool Corporate)
+- Farben: Navy/Slate-Palette (`--black: #0A0E1A`, `--charcoal: #111827`, `--copper: #64748B`)
+- Headlines: `Cormorant Garamond` (Google Fonts)
+- Body: `Inter` (Google Fonts)
+- Animationen: Scroll-Reveal, Counter, Marquee, Grain-Overlay – dezent und professionell
 
 ## Kontaktdaten auf der Seite
 
