@@ -7,7 +7,7 @@ Letzte Aktualisierung: 2026-03-04
 - [x] **E-Mail-Adresse auf Website austauschen** – `julio@brinkmann-solutions.de` durch `jb@brinkmann-solutions.de` in `index.html` ersetzt
 - [x] **Impressum erstellen** – `impressum.html` mit Pflichtangaben nach § 5 DDG, Footer-Link aktualisiert
 - [x] **AGB erstellen** – `agb.html` mit 10 Paragraphen für IT-Beratung (B2B), Footer-Link aktualisiert
-- [ ] **Datenschutzerklärung erstellen** – DSGVO-konform, insb. wegen extern geladenem Google Fonts
+- [x] **Datenschutzerklärung erstellen** – `datenschutz.html` DSGVO-konform erstellt (GitHub Pages, Google Fonts, E-Mail-Kontakt, Betroffenenrechte), Footer-Links aktualisiert
 
 ## Offen – Priorität mittel
 
