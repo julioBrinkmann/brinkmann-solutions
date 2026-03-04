@@ -13,12 +13,12 @@
             --black: #0A0E1A;
             --charcoal: #111827;
             --warm-dark: #1E293B;
-            --copper: #64748B;
-            --copper-light: #94A3B8;
+            --copper: #0D9488;
+            --copper-light: #2DD4BF;
             --cream: #F1F5F9;
             --warm-white: #F8FAFC;
             --warm-gray: #94A3B8;
-            --mid-gray: #64748B;
+            --mid-gray: #475569;
             --light-line: rgba(15, 23, 42, 0.08);
             --white: #FFFFFF;
         }
@@ -145,17 +145,24 @@
             min-height: 100vh;
             background: var(--charcoal);
             color: var(--white);
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
             position: relative;
             overflow: hidden;
+            gap: 4rem;
+            padding: 0 6rem;
         }
 
         .hero-content {
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            padding: 8rem 3rem 5rem 6rem;
+            align-items: flex-start;
+            text-align: left;
+            max-width: 560px;
+            flex: 1 1 50%;
+            padding: 2rem 0;
             position: relative;
             z-index: 2;
         }
@@ -190,10 +197,10 @@
         .hero-desc {
             font-size: 1rem;
             line-height: 1.8;
-            color: rgba(255,255,255,0.55);
-            max-width: 440px;
-            margin-bottom: 3.5rem;
-            font-weight: 300;
+            color: rgba(255,255,255,0.6);
+            max-width: 520px;
+            margin: 0 0 3rem;
+            font-weight: 400;
             opacity: 0;
             animation: slideIn 0.8s ease 0.7s forwards;
         }
@@ -201,63 +208,78 @@
         .hero-cta {
             display: inline-flex;
             align-items: center;
-            gap: 1rem;
+            justify-content: center;
+            gap: 0.8rem;
             color: var(--white);
             text-decoration: none;
             font-size: 0.8rem;
             font-weight: 600;
             letter-spacing: 0.14em;
             text-transform: uppercase;
+            background: var(--copper);
+            padding: 1rem 2.2rem;
+            border-radius: 3px;
             opacity: 0;
             animation: slideIn 0.8s ease 0.9s forwards;
-            transition: gap 0.3s ease;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
 
         .hero-cta:hover {
-            gap: 1.5rem;
+            background: var(--copper-light);
+            color: var(--charcoal);
+            transform: translateY(-2px);
         }
 
         .hero-cta .line {
             display: block;
-            width: 60px;
+            width: 24px;
             height: 1px;
-            background: var(--copper);
+            background: currentColor;
             transition: width 0.3s ease;
         }
 
         .hero-cta:hover .line {
-            width: 90px;
+            width: 36px;
         }
 
-        .hero-visual {
+        /* Hero SVG Graphic */
+        .hero-graphic {
             position: relative;
-            overflow: hidden;
+            z-index: 2;
+            flex: 1 1 45%;
+            max-width: 700px;
+            padding: 0;
+            opacity: 0;
+            animation: slideIn 1s ease 1.1s forwards;
         }
 
-        .hero-photo {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, var(--warm-dark) 0%, var(--charcoal) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .hero-graphic svg {
+            width: 100%;
+            height: auto;
         }
 
-        .hero-photo-placeholder {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            color: rgba(255,255,255,0.2);
-            font-size: 0.8rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
+        @keyframes nodePulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
         }
 
-        .hero-photo-placeholder svg {
-            width: 64px;
-            height: 64px;
-            opacity: 0.3;
+        @keyframes dashFlow {
+            to { stroke-dashoffset: 0; }
+        }
+
+        .hero-graphic .node {
+            animation: nodePulse 3s ease-in-out infinite;
+        }
+
+        .hero-graphic .node:nth-child(2) { animation-delay: 0.5s; }
+        .hero-graphic .node:nth-child(3) { animation-delay: 1s; }
+        .hero-graphic .node:nth-child(4) { animation-delay: 1.5s; }
+        .hero-graphic .node:nth-child(5) { animation-delay: 2s; }
+
+        .hero-graphic .flow-line {
+            stroke-dasharray: 8 4;
+            stroke-dashoffset: 24;
+            animation: dashFlow 2s linear infinite;
         }
 
         /* Decorative number */
@@ -275,29 +297,31 @@
 
         /* ─── MARQUEE STRIP ─── */
         .marquee-strip {
-            background: var(--copper);
+            background: var(--warm-dark);
             padding: 0.9rem 0;
             overflow: hidden;
             white-space: nowrap;
+            border-top: 1px solid rgba(13,148,136,0.15);
+            border-bottom: 1px solid rgba(13,148,136,0.15);
         }
 
         .marquee-track {
             display: flex;
-            animation: marquee 16s linear infinite;
+            animation: marquee 38s linear infinite;
         }
 
         .marquee-item {
-            font-size: 0.72rem;
+            font-size: 0.7rem;
             font-weight: 600;
-            letter-spacing: 0.18em;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: var(--white);
+            color: rgba(255,255,255,0.6);
             padding: 0 3rem;
             flex-shrink: 0;
         }
 
         .marquee-dot {
-            color: rgba(255,255,255,0.4);
+            color: var(--copper);
             padding: 0 1rem;
             flex-shrink: 0;
         }
@@ -507,7 +531,7 @@
             line-height: 1.9;
             color: var(--warm-dark);
             margin-bottom: 1.8rem;
-            font-weight: 300;
+            font-weight: 400;
         }
 
         .about-highlight {
@@ -594,7 +618,7 @@
             line-height: 1.85;
             color: var(--warm-dark);
             font-style: italic;
-            font-weight: 300;
+            font-weight: 400;
             margin-bottom: 2rem;
         }
 
@@ -627,6 +651,10 @@
         .testimonial-info span {
             font-size: 0.78rem;
             color: var(--warm-gray);
+        }
+
+        .testimonial-featured {
+            border-left: 3px solid var(--copper);
         }
 
         /* ─── KONTAKT ─── */
@@ -680,9 +708,9 @@
 
         .kontakt-left p {
             font-size: 0.95rem;
-            color: rgba(255,255,255,0.45);
+            color: rgba(255,255,255,0.5);
             line-height: 1.8;
-            font-weight: 300;
+            font-weight: 400;
             max-width: 400px;
         }
 
@@ -853,17 +881,29 @@
         /* ─── RESPONSIVE ─── */
         @media (max-width: 1024px) {
             .hero {
-                grid-template-columns: 1fr;
                 min-height: auto;
+                flex-direction: column;
+                padding: 0;
+                gap: 0;
             }
 
             .hero-content {
-                padding: 10rem 2rem 4rem;
+                align-items: center;
+                text-align: center;
+                max-width: 800px;
+                flex: none;
+                padding: 10rem 2rem 2rem;
             }
 
-            .hero-visual {
-                height: 50vh;
-                position: relative;
+            .hero-content .hero-desc {
+                margin: 0 auto 3rem;
+            }
+
+            .hero-graphic {
+                flex: none;
+                width: 100%;
+                max-width: 450px;
+                padding: 0 2rem 3rem;
             }
 
             .hero-deco { display: none; }
@@ -879,10 +919,19 @@
 
             .service-row {
                 grid-template-columns: 60px 1fr;
-                gap: 1rem;
+                gap: 0.5rem 1rem;
+                grid-template-rows: auto auto;
             }
 
-            .service-desc, .service-arrow {
+            .service-desc {
+                grid-column: 2;
+                grid-row: 2;
+                font-size: 0.82rem;
+                line-height: 1.6;
+                margin-top: -0.2rem;
+            }
+
+            .service-arrow {
                 display: none;
             }
 
@@ -946,7 +995,12 @@
             }
 
             .hero-content {
-                padding: 8rem 1.5rem 3rem;
+                padding: 8rem 1.5rem 2rem;
+            }
+
+            .hero-graphic {
+                max-width: 300px;
+                padding: 0 1.5rem 2rem;
             }
 
             .about-numbers {
@@ -1010,13 +1064,31 @@
             <span class="line"></span>
         </a>
     </div>
-    <div class="hero-visual">
-        <div class="hero-photo">
-            <div class="hero-photo-placeholder">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg>
-                Ihr Foto hier
-            </div>
-        </div>
+    <div class="hero-graphic">
+        <svg viewBox="0 0 600 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Connection lines -->
+            <line class="flow-line" x1="90" y1="90" x2="210" y2="50" stroke="#0D9488" stroke-width="1" opacity="0.3"/>
+            <line class="flow-line" x1="90" y1="90" x2="210" y2="130" stroke="#0D9488" stroke-width="1" opacity="0.3"/>
+            <line class="flow-line" x1="210" y1="50" x2="370" y2="70" stroke="#0D9488" stroke-width="1" opacity="0.3"/>
+            <line class="flow-line" x1="210" y1="130" x2="370" y2="70" stroke="#0D9488" stroke-width="1" opacity="0.3"/>
+            <line class="flow-line" x1="210" y1="130" x2="370" y2="140" stroke="#0D9488" stroke-width="1" opacity="0.3"/>
+            <line class="flow-line" x1="370" y1="70" x2="510" y2="90" stroke="#0D9488" stroke-width="1" opacity="0.3"/>
+            <line class="flow-line" x1="370" y1="140" x2="510" y2="90" stroke="#0D9488" stroke-width="1" opacity="0.3"/>
+            <!-- Nodes -->
+            <circle class="node" cx="90" cy="90" r="18" stroke="#2DD4BF" stroke-width="1.5" fill="rgba(13,148,136,0.1)"/>
+            <text x="90" y="94" text-anchor="middle" fill="#2DD4BF" font-size="9" font-family="Inter" font-weight="500">DATA</text>
+            <circle class="node" cx="210" cy="50" r="14" stroke="#2DD4BF" stroke-width="1" fill="rgba(13,148,136,0.08)"/>
+            <text x="210" y="54" text-anchor="middle" fill="#94A3B8" font-size="7" font-family="Inter">ETL</text>
+            <circle class="node" cx="210" cy="130" r="14" stroke="#2DD4BF" stroke-width="1" fill="rgba(13,148,136,0.08)"/>
+            <text x="210" y="134" text-anchor="middle" fill="#94A3B8" font-size="7" font-family="Inter">CRM</text>
+            <rect class="node" x="345" y="50" width="50" height="40" rx="4" stroke="#2DD4BF" stroke-width="1" fill="rgba(13,148,136,0.08)"/>
+            <text x="370" y="74" text-anchor="middle" fill="#94A3B8" font-size="7" font-family="Inter">Fabric</text>
+            <rect class="node" x="345" y="120" width="50" height="40" rx="4" stroke="#2DD4BF" stroke-width="1" fill="rgba(13,148,136,0.08)"/>
+            <text x="370" y="144" text-anchor="middle" fill="#94A3B8" font-size="7" font-family="Inter">AI</text>
+            <circle class="node" cx="510" cy="90" r="22" stroke="#2DD4BF" stroke-width="1.5" fill="rgba(13,148,136,0.12)"/>
+            <text x="510" y="86" text-anchor="middle" fill="#2DD4BF" font-size="8" font-family="Inter" font-weight="600">Power</text>
+            <text x="510" y="98" text-anchor="middle" fill="#2DD4BF" font-size="8" font-family="Inter" font-weight="600">BI</text>
+        </svg>
     </div>
     <div class="hero-deco">BS</div>
 </section>
@@ -1140,25 +1212,25 @@
         </div>
 
         <div class="testimonials">
-            <div class="testimonial reveal">
+            <div class="testimonial testimonial-featured reveal">
                 <span class="testimonial-quote">„</span>
-                <p>„Hier steht eine Kundenstimme. Ersetzen Sie diesen Platzhalter mit einem echten Zitat eines zufriedenen Kunden über Ihre Zusammenarbeit."</p>
+                <p>„Julio hat für uns ein komplexes Power BI System entwickelt, das unsere Unternehmensdaten erstmals wirklich nutzbar macht. Seine Fähigkeit, sich in unsere Geschäftsprozesse hineinzudenken und technisch exzellente Lösungen zu liefern, hat uns beeindruckt."</p>
                 <div class="testimonial-meta">
-                    <div class="testimonial-initial">MK</div>
+                    <div class="testimonial-initial">MP</div>
                     <div class="testimonial-info">
-                        <strong>Max K.</strong>
-                        <span>Geschäftsführer, Beispiel GmbH</span>
+                        <strong>Markus P.</strong>
+                        <span>Geschäftsführer, iPointing GmbH</span>
                     </div>
                 </div>
             </div>
             <div class="testimonial reveal reveal-delay-1">
                 <span class="testimonial-quote">„</span>
-                <p>„Hier steht eine weitere Kundenstimme. Ersetzen Sie diesen Platzhalter mit einem echten Zitat über die Qualität Ihrer Beratung."</p>
+                <p>„Wir brauchten ein CRM, das wirklich zu unserem Unternehmen passt – kein Standard von der Stange. Julio hat uns ein maßgeschneidertes System in Microsoft Dynamics entwickelt, das unsere Abläufe spürbar vereinfacht hat."</p>
                 <div class="testimonial-meta">
-                    <div class="testimonial-initial">SB</div>
+                    <div class="testimonial-initial">HB</div>
                     <div class="testimonial-info">
-                        <strong>Sandra B.</strong>
-                        <span>Teamleiterin, Muster AG</span>
+                        <strong>Holger B.</strong>
+                        <span>Geschäftsführer, Flash Film- und Cateringservice GmbH</span>
                     </div>
                 </div>
             </div>

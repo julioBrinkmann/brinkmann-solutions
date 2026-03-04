@@ -16,12 +16,12 @@ Aktiv seit Commit `ddd451a`.
 | `--black`        | `#0A0E1A`                    | Navy-Schwarz        | Text, dunkle Flächen                |
 | `--charcoal`     | `#111827`                    | Dunkles Navy        | Nav-Hintergrund, Hero               |
 | `--warm-dark`    | `#1E293B`                    | Slate-Dunkel        | Kontakt-Sektion, Footer             |
-| `--copper`       | `#64748B`                    | Steel (Akzent)      | Akzentfarbe, Buttons, Links         |
-| `--copper-light` | `#94A3B8`                    | Helles Steel        | Hover-States, sekundäre Akzente     |
+| `--copper`       | `#0D9488`                    | Teal (Akzent)       | Akzentfarbe, Buttons, Links, CTA    |
+| `--copper-light` | `#2DD4BF`                    | Helles Teal         | Hover-States, sekundäre Akzente     |
 | `--cream`        | `#F1F5F9`                    | Kühles Hellgrau     | Wechsel-Hintergrund (Sektionen)     |
 | `--warm-white`   | `#F8FAFC`                    | Kühles Weiß         | Haupt-Hintergrund (Body)            |
 | `--warm-gray`    | `#94A3B8`                    | Slate-Grau          | Untertitel, Meta-Text               |
-| `--mid-gray`     | `#64748B`                    | Mittleres Slate     | Fließtext in dunklen Sektionen      |
+| `--mid-gray`     | `#475569`                    | Mittleres Slate     | Fließtext, Beschreibungen           |
 | `--light-line`   | `rgba(15, 23, 42, 0.08)`     | Subtile Linien      | Trennlinien, Borders                |
 | `--white`        | `#FFFFFF`                    | Weiß                | Text auf dunklem Grund              |
 
@@ -33,10 +33,13 @@ Aktiv seit Commit `ddd451a`.
 | Body-Text   | Inter               | 300–700           | Google Fonts |
 
 ### Visuelles Konzept
-- Kühle, professionelle Navy/Slate-Palette
+- Kühle, professionelle Navy/Slate-Palette mit Teal als Akzentfarbe
 - Elegante Serif-Headlines + moderne Sans-Serif Body
 - Grain-Overlay (SVG-Noise) auf `body::after` für subtile Textur
 - Kein generisches AI-Template-Gefühl – reduziertes, editorials Layout
+- Hero: zentriertes Layout mit abstrakter SVG-Datenpipeline-Grafik
+- CTA im Hero als gefüllter Teal-Button statt Text-Link
+- Marquee: dunkel (warm-dark) mit Teal-Akzent-Borders, langsame Animation (38s)
 
 ### Animationen
 - Scroll-Reveal (IntersectionObserver) an Leistungen, Über mich, Referenzen
@@ -135,7 +138,7 @@ Aktiv von Projektstart bis Commit `06d2f41`.
 | Eigenschaft  | V1 (Warm)                 | V2 (Cool Corporate)       | Richtung           |
 |--------------|---------------------------|----------------------------|--------------------|
 | Grundton     | Braun/Kupfer-Palette      | Navy/Slate-Palette         | Warm → Kühl        |
-| Akzent       | `#B8784E` Kupfer          | `#64748B` Steel            | Orange → Blaugrau  |
+| Akzent       | `#B8784E` Kupfer          | `#0D9488` Teal             | Orange → Teal      |
 | Hintergrund  | `#FAF8F5` Cremig-Warm     | `#F8FAFC` Kühl-Neutral     | Gelbstich → Blaustich |
 | Dunkel-Töne  | `#1A1A1A` Neutral-Schwarz | `#111827` Navy-Schwarz     | Neutral → Bläulich |
 | Headlines    | Instrument Serif          | Cormorant Garamond         | Modern → Klassisch |
