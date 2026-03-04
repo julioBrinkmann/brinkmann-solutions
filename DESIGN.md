@@ -37,7 +37,7 @@ Aktiv seit Commit `ddd451a`.
 - Elegante Serif-Headlines + moderne Sans-Serif Body
 - Grain-Overlay (SVG-Noise) auf `body::after` für subtile Textur
 - Kein generisches AI-Template-Gefühl – reduziertes, editorials Layout
-- Hero: zentriertes Layout mit abstrakter SVG-Datenpipeline-Grafik
+- Hero: Side-by-Side Layout auf Desktop (Text links, SVG-Grafik rechts), gestapelt auf Tablet/Mobile. Abstrakte SVG-Datenpipeline-Grafik mit scale(1.15) für prominente Darstellung
 - CTA im Hero als gefüllter Teal-Button statt Text-Link
 - Marquee: dunkel (warm-dark) mit Teal-Akzent-Borders, langsame Animation (38s)
 
@@ -47,6 +47,11 @@ Aktiv seit Commit `ddd451a`.
 - Marquee-Laufband nach Hero (duplizierte Items für nahtlose Schleife)
 - Nav-Transition: dunkel (transparent) → hell (compact) nach Hero-Scroll
 - Alles dezent und professionell – keine übertriebenen Effekte
+
+### Hero-Layout (Responsive)
+- **Desktop (>1024px):** Flex-Row, Text linksbündig (50%), Grafik rechts (50%), max-width 800px, gap 4rem, Seitenpadding 6rem
+- **Tablet (641–1024px):** Flex-Column, Text und Grafik zentriert gestapelt, Grafik max-width 550px
+- **Mobile (≤640px):** Flex-Column, Grafik max-width 480px
 
 ### Responsive Breakpoints
 - Desktop: > 1024px
