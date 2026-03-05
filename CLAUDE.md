@@ -11,17 +11,17 @@ Consulting-Website für Julio Benjamin Brinkmann – Data Analytics, Power BI, M
 
 - **Sprache:** Deutsch, Sie-Ansprache
 - **Keine Build-Tools:** Reines HTML/CSS/JS, kein npm, kein Framework
-- **Einzelne Datei:** Alles in `index.html` (CSS und JS inline)
+- **Hauptdatei:** `index.html` (CSS und JS inline). Zusätzlich existieren `impressum.html`, `agb.html`, `datenschutz.html` als separate Unterseiten.
 - **Hosting:** GitHub Pages – keine serverseitigen Features verwenden
 - **Design:** Cool Corporate (Navy/Steel) – KEIN generisches AI-Template-Design. Details in `DESIGN.md`
 
 ## Architektur der index.html
 
-Die gesamte Website lebt in einer einzigen `index.html` (~1280 Zeilen) mit drei Inline-Blöcken:
+Die Hauptseite `index.html` (~1632 Zeilen) enthält drei Inline-Blöcke:
 
-1. **`<style>`** (Zeile ~11–980): CSS mit Custom Properties in `:root`, Sektions-Styles, Animationen, Responsive Breakpoints
-2. **HTML-Body** (Zeile ~982–1205): Sektionen in Reihenfolge: Nav → Hero → Marquee → Leistungen → Über mich → Referenzen → Kontakt → Footer
-3. **`<script>`** (Zeile ~1207–1274): Vanilla JS für Nav-Scroll-Verhalten, Mobile-Menü, IntersectionObserver (Scroll-Reveal), Zahlen-Counter-Animation
+1. **`<style>`** (Zeile ~100–1202): CSS mit Custom Properties in `:root`, Sektions-Styles, Animationen, Responsive Breakpoints
+2. **HTML-Body** (Zeile ~1204–1468): Sektionen in Reihenfolge: Nav → Hero → Marquee → Leistungen → Über mich → Referenzen → Kontakt → Footer
+3. **`<script>`** (Zeile ~1470–1629): Vanilla JS für Nav-Scroll-Verhalten, Mobile-Menü, IntersectionObserver (Scroll-Reveal), Zahlen-Counter-Animation, E-Mail-Obfuscation
 
 ### CSS-Architektur
 - Custom Properties in `:root` für alle Farben (z.B. `--copper`, `--charcoal`, `--cream`)
@@ -39,7 +39,7 @@ Die gesamte Website lebt in einer einzigen `index.html` (~1280 Zeilen) mit drei 
 Vollständige Dokumentation in `DESIGN.md` (Farben, Typografie, Historie, Anforderungen).
 
 ### Kurzreferenz (aktiv: Cool Corporate)
-- Farben: Navy/Slate-Palette (`--black: #0A0E1A`, `--charcoal: #111827`, `--copper: #64748B`)
+- Farben: Navy/Slate-Palette (`--black: #0A0E1A`, `--charcoal: #111827`, `--copper: #0D9488`)
 - Headlines: `Cormorant Garamond` (Google Fonts)
 - Body: `Inter` (Google Fonts)
 - Animationen: Scroll-Reveal, Counter, Marquee, Grain-Overlay – dezent und professionell
@@ -71,9 +71,7 @@ Offene Aufgaben und Projektfortschritt werden in `STATUS.md` gepflegt. Bei jeder
 
 ## Hinweise für Änderungen
 
-- Foto-Platzhalter im Hero: `.hero-photo-placeholder` ersetzen durch `<img>` Tag
-- Testimonials: Platzhalter-Texte in `.testimonial` Karten ersetzen
-- Impressum/Datenschutz: Separate HTML-Seiten erstellen und Footer-Links aktualisieren (`<a href="#">` noch leer)
+- Testimonials: Platzhalter-Texte in `.testimonial` Karten durch echte Kundenstimmen ersetzen
 - Google Fonts sollten langfristig lokal gehostet werden (DSGVO)
-- Footer zeigt noch `© 2025` – ggf. aktualisieren
+- Favicon erstellen und einbinden
 - Neue Sektionen bekommen fortlaufende Nummern (aktuell 01–04 in `section-num`)

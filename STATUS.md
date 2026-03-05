@@ -17,8 +17,6 @@ Letzte Aktualisierung: 2026-03-05
 - [ ] **Favicon erstellen** – Icon für Browser-Tab
 - [x] **Open Graph Meta-Tags** – OG-Tags, Twitter Cards und canonical URL in `index.html` hinzugefügt
 
-## Offen – Priorität niedrig
-
 ## Erledigt
 
 - [x] **HTTPS aktivieren** – DNS-Check abgeschlossen, HTTPS aktiv
