@@ -260,28 +260,74 @@
             transform-origin: center center;
         }
 
-        @keyframes nodePulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
+        /* Flow-Pfad Animationen */
+        @keyframes flowParticle {
+            0% { offset-distance: 0%; opacity: 0; }
+            5% { opacity: 1; }
+            95% { opacity: 1; }
+            100% { offset-distance: 100%; opacity: 0; }
         }
 
-        @keyframes dashFlow {
-            to { stroke-dashoffset: 0; }
+        @keyframes nodeAppear {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
 
-        .hero-graphic .node {
-            animation: nodePulse 3s ease-in-out infinite;
+        @keyframes subtlePulse {
+            0%, 100% { filter: drop-shadow(0 0 4px rgba(45,212,191,0)); }
+            50% { filter: drop-shadow(0 0 8px rgba(45,212,191,0.3)); }
         }
 
-        .hero-graphic .node:nth-child(2) { animation-delay: 0.5s; }
-        .hero-graphic .node:nth-child(3) { animation-delay: 1s; }
-        .hero-graphic .node:nth-child(4) { animation-delay: 1.5s; }
-        .hero-graphic .node:nth-child(5) { animation-delay: 2s; }
+        .hero-graphic .flow-path {
+            stroke-dasharray: 6 4;
+            stroke-dashoffset: 0;
+        }
 
-        .hero-graphic .flow-line {
-            stroke-dasharray: 8 4;
-            stroke-dashoffset: 24;
-            animation: dashFlow 2s linear infinite;
+        .hero-graphic .particle {
+            offset-path: path('M 70 75 C 150 75, 150 75, 220 75 C 290 75, 290 75, 370 75 C 450 75, 450 75, 530 75');
+            offset-rotate: 0deg;
+            animation: flowParticle 4s linear infinite;
+        }
+
+        .hero-graphic .particle:nth-child(2) { animation-delay: -1.3s; }
+        .hero-graphic .particle:nth-child(3) { animation-delay: -2.6s; }
+
+        .hero-graphic .node-group {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            transform-origin: center;
+            animation: subtlePulse 3s ease-in-out infinite;
+        }
+
+        .hero-graphic .node-group:nth-child(5) { animation-delay: 0s; }
+        .hero-graphic .node-group:nth-child(6) { animation-delay: 0.75s; }
+        .hero-graphic .node-group:nth-child(7) { animation-delay: 1.5s; }
+        .hero-graphic .node-group:nth-child(8) { animation-delay: 2.25s; }
+
+        .hero-graphic .node-group:hover .node-circle {
+            filter: drop-shadow(0 0 12px rgba(45,212,191,0.5));
+            fill: rgba(13,148,136,0.2);
+        }
+
+        .hero-graphic .node-group:hover .node-label {
+            fill: #2DD4BF;
+        }
+
+        .hero-graphic .node-group:hover .node-subtitle {
+            opacity: 1;
+        }
+
+        .hero-graphic .node-circle {
+            transition: filter 0.3s ease, fill 0.3s ease;
+        }
+
+        .hero-graphic .node-label {
+            transition: fill 0.3s ease;
+        }
+
+        .hero-graphic .node-subtitle {
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
         }
 
         /* Decorative number */
@@ -1067,29 +1113,45 @@
         </a>
     </div>
     <div class="hero-graphic">
-        <svg viewBox="0 0 600 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Connection lines -->
-            <line class="flow-line" x1="90" y1="90" x2="210" y2="50" stroke="#0D9488" stroke-width="1" opacity="0.3"/>
-            <line class="flow-line" x1="90" y1="90" x2="210" y2="130" stroke="#0D9488" stroke-width="1" opacity="0.3"/>
-            <line class="flow-line" x1="210" y1="50" x2="370" y2="70" stroke="#0D9488" stroke-width="1" opacity="0.3"/>
-            <line class="flow-line" x1="210" y1="130" x2="370" y2="70" stroke="#0D9488" stroke-width="1" opacity="0.3"/>
-            <line class="flow-line" x1="210" y1="130" x2="370" y2="140" stroke="#0D9488" stroke-width="1" opacity="0.3"/>
-            <line class="flow-line" x1="370" y1="70" x2="510" y2="90" stroke="#0D9488" stroke-width="1" opacity="0.3"/>
-            <line class="flow-line" x1="370" y1="140" x2="510" y2="90" stroke="#0D9488" stroke-width="1" opacity="0.3"/>
-            <!-- Nodes -->
-            <circle class="node" cx="90" cy="90" r="18" stroke="#2DD4BF" stroke-width="1.5" fill="rgba(13,148,136,0.1)"/>
-            <text x="90" y="94" text-anchor="middle" fill="#2DD4BF" font-size="9" font-family="Inter" font-weight="500">DATA</text>
-            <circle class="node" cx="210" cy="50" r="14" stroke="#2DD4BF" stroke-width="1" fill="rgba(13,148,136,0.08)"/>
-            <text x="210" y="54" text-anchor="middle" fill="#94A3B8" font-size="7" font-family="Inter">Analyse</text>
-            <circle class="node" cx="210" cy="130" r="14" stroke="#2DD4BF" stroke-width="1" fill="rgba(13,148,136,0.08)"/>
-            <text x="210" y="134" text-anchor="middle" fill="#94A3B8" font-size="7" font-family="Inter">Workflow</text>
-            <rect class="node" x="345" y="50" width="50" height="40" rx="4" stroke="#2DD4BF" stroke-width="1" fill="rgba(13,148,136,0.08)"/>
-            <text x="370" y="74" text-anchor="middle" fill="#94A3B8" font-size="7" font-family="Inter">KI</text>
-            <rect class="node" x="345" y="120" width="50" height="40" rx="4" stroke="#2DD4BF" stroke-width="1" fill="rgba(13,148,136,0.08)"/>
-            <text x="370" y="144" text-anchor="middle" fill="#94A3B8" font-size="7" font-family="Inter">Tools</text>
-            <circle class="node" cx="510" cy="90" r="22" stroke="#2DD4BF" stroke-width="1.5" fill="rgba(13,148,136,0.12)"/>
-            <text x="510" y="86" text-anchor="middle" fill="#2DD4BF" font-size="8" font-family="Inter" font-weight="600">Ergeb</text>
-            <text x="510" y="98" text-anchor="middle" fill="#2DD4BF" font-size="8" font-family="Inter" font-weight="600">nis</text>
+        <svg viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Flow path (connection line) -->
+            <path class="flow-path" d="M 70 75 C 150 75, 150 75, 220 75 C 290 75, 290 75, 370 75 C 450 75, 450 75, 530 75" stroke="#0D9488" stroke-width="1" opacity="0.25" fill="none"/>
+            <!-- Animated particles -->
+            <circle class="particle" r="3" fill="#2DD4BF" opacity="0.8"/>
+            <circle class="particle" r="2.5" fill="#2DD4BF" opacity="0.6"/>
+            <circle class="particle" r="2" fill="#2DD4BF" opacity="0.5"/>
+            <!-- Node 1: Daten -->
+            <g class="node-group">
+                <circle class="node-circle" cx="70" cy="75" r="24" stroke="#2DD4BF" stroke-width="1.5" fill="rgba(13,148,136,0.1)"/>
+                <text x="70" y="42" text-anchor="middle" fill="rgba(45,212,191,0.4)" font-size="9" font-family="Inter" font-weight="500">01</text>
+                <text x="70" y="79" text-anchor="middle" fill="#2DD4BF" font-size="11" font-family="Inter" font-weight="600">Daten</text>
+                <text class="node-subtitle" x="70" y="116" text-anchor="middle" fill="#94A3B8" font-size="8.5" font-family="Inter">Erfassen &amp;</text>
+                <text class="node-subtitle" x="70" y="129" text-anchor="middle" fill="#94A3B8" font-size="8.5" font-family="Inter">Verbinden</text>
+            </g>
+            <!-- Node 2: Analyse -->
+            <g class="node-group">
+                <circle class="node-circle" cx="220" cy="75" r="24" stroke="#2DD4BF" stroke-width="1.5" fill="rgba(13,148,136,0.1)"/>
+                <text x="220" y="42" text-anchor="middle" fill="rgba(45,212,191,0.4)" font-size="9" font-family="Inter" font-weight="500">02</text>
+                <text class="node-label" x="220" y="79" text-anchor="middle" fill="#94A3B8" font-size="11" font-family="Inter" font-weight="600">Analyse</text>
+                <text class="node-subtitle" x="220" y="116" text-anchor="middle" fill="#94A3B8" font-size="8.5" font-family="Inter">Verstehen &amp;</text>
+                <text class="node-subtitle" x="220" y="129" text-anchor="middle" fill="#94A3B8" font-size="8.5" font-family="Inter">Strukturieren</text>
+            </g>
+            <!-- Node 3: Lösung -->
+            <g class="node-group">
+                <circle class="node-circle" cx="370" cy="75" r="24" stroke="#2DD4BF" stroke-width="1.5" fill="rgba(13,148,136,0.1)"/>
+                <text x="370" y="42" text-anchor="middle" fill="rgba(45,212,191,0.4)" font-size="9" font-family="Inter" font-weight="500">03</text>
+                <text class="node-label" x="370" y="79" text-anchor="middle" fill="#94A3B8" font-size="11" font-family="Inter" font-weight="600">Lösung</text>
+                <text class="node-subtitle" x="370" y="116" text-anchor="middle" fill="#94A3B8" font-size="8.5" font-family="Inter">KI &amp; Tools</text>
+                <text class="node-subtitle" x="370" y="129" text-anchor="middle" fill="#94A3B8" font-size="8.5" font-family="Inter">einsetzen</text>
+            </g>
+            <!-- Node 4: Resultat -->
+            <g class="node-group">
+                <circle class="node-circle" cx="530" cy="75" r="28" stroke="#2DD4BF" stroke-width="1.5" fill="rgba(13,148,136,0.12)"/>
+                <text x="530" y="42" text-anchor="middle" fill="rgba(45,212,191,0.4)" font-size="9" font-family="Inter" font-weight="500">04</text>
+                <text x="530" y="79" text-anchor="middle" fill="#2DD4BF" font-size="11" font-family="Inter" font-weight="600">Resultat</text>
+                <text class="node-subtitle" x="530" y="116" text-anchor="middle" fill="#94A3B8" font-size="8.5" font-family="Inter">Messbare</text>
+                <text class="node-subtitle" x="530" y="129" text-anchor="middle" fill="#94A3B8" font-size="8.5" font-family="Inter">Ergebnisse</text>
+            </g>
         </svg>
     </div>
     <div class="hero-deco">BS</div>
