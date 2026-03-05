@@ -1249,9 +1249,9 @@
             <p>Sie möchten Ihre Daten besser nutzen, Prozesse automatisieren oder KI sinnvoll einsetzen? Ich freue mich auf Ihre Nachricht.</p>
         </div>
         <div class="kontakt-right reveal reveal-delay-1">
-            <a href="mailto:jb@brinkmann-solutions.de" class="kontakt-email-link">
+            <a id="kontakt-email" class="kontakt-email-link" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
-                jb@brinkmann-solutions.de
+                <span id="kontakt-email-text"></span>
             </a>
             <div class="kontakt-meta">
                 <div class="kontakt-meta-item">
@@ -1280,6 +1280,16 @@
 </footer>
 
 <script>
+    // Email obfuscation – assembled at runtime to prevent bot scraping
+    (function() {
+        var u = 'jb', d = 'brinkmann-solutions', t = 'de';
+        var addr = u + '@' + d + '.' + t;
+        var el = document.getElementById('kontakt-email');
+        var txt = document.getElementById('kontakt-email-text');
+        if (el) el.href = 'mai' + 'lto:' + addr;
+        if (txt) txt.textContent = addr;
+    })();
+
     // Nav scroll behavior
     const nav = document.getElementById('mainNav');
     const hero = document.querySelector('.hero');
