@@ -1,6 +1,6 @@
 # STATUS – Brinkmann Solutions Website
 
-Letzte Aktualisierung: 2026-03-04
+Letzte Aktualisierung: 2026-03-05
 
 ## Offen – Priorität hoch
 
@@ -15,7 +15,7 @@ Letzte Aktualisierung: 2026-03-04
 - [ ] **Kundenstimmen einfügen** – Platzhalter-Testimonials mit echten Zitaten ersetzen
 - [ ] **Google Fonts lokal hosten** – Für DSGVO-Konformität (aktuell extern von Google geladen)
 - [ ] **Favicon erstellen** – Icon für Browser-Tab
-- [ ] **Open Graph Meta-Tags** – Vorschaubild und Beschreibung für WhatsApp/LinkedIn/Social Sharing
+- [x] **Open Graph Meta-Tags** – OG-Tags, Twitter Cards und canonical URL in `index.html` hinzugefügt
 
 ## Offen – Priorität niedrig
 
@@ -35,3 +35,7 @@ Letzte Aktualisierung: 2026-03-04
 - [x] GitHub CLI installiert & authentifiziert (gh v2.87.3)
 - [x] E-Mail-Adresse eingerichtet – `jb@brinkmann-solutions.de` als Shared Mailbox in M365 (DNS: MX, CNAME, TXT/SPF gesetzt)
 - [x] Impressum & AGB erstellt (`impressum.html`, `agb.html`) und Footer-Links verknüpft
+- [x] **SEO-Optimierung** – Canonical URL, Open Graph, Twitter Cards, JSON-LD (WebSite, ProfessionalService, Person), semantisches HTML (`<main>`, `role="banner"`, `aria-label`)
+- [x] **robots.txt** – Erstellt mit Sitemap-Verweis
+- [x] **sitemap.xml** – Erstellt mit Hauptseite
+- [x] **llms.txt** – Maschinenlesbarer Kontext für LLM-Crawler (Leistungen, Technologien, Zielgruppe)

@@ -1,0 +1,30 @@
+# Brinkmann Solutions
+
+> IT-Beratung für Digitalisierung, Datenanalyse und KI-Strategie – spezialisiert auf kleine und mittelständische Unternehmen in München und deutschlandweit.
+
+## Über Brinkmann Solutions
+
+Brinkmann Solutions ist die Beratungsmarke von Julio Benjamin Brinkmann. Er unterstützt KMU dabei, Prozesse zu vereinfachen und Daten nutzbar zu machen – mit den richtigen Tools, KI und pragmatischer Beratung.
+
+Standort: München, Deutschland
+Website: https://www.brinkmann-solutions.de/
+Kontakt: jb@brinkmann-solutions.de
+
+## Leistungen
+
+- **Daten & Reporting**: Aussagekräftige Dashboards und Reports mit Power BI und Excel – Echtzeit-Einblicke in Unternehmenskennzahlen.
+- **Prozesse & Workflows**: Wiederkehrende Abläufe automatisieren und intelligent verknüpfen – mit n8n, Power Automate oder individuellen Lösungen.
+- **KI-Strategie & Beratung**: Analyse, welche KI-Tools und Technologien für ein Unternehmen Sinn machen – und pragmatische Einführung.
+- **Systeme & Integration**: CRM, Dateninfrastruktur und Schnittstellen aufbauen – damit Systeme zusammenspielen und Daten nutzbar werden.
+
+## Technologie-Stack
+
+Power BI, Microsoft Fabric, Dynamics 365, n8n, Power Automate, Excel, Azure, SQL, Python, Künstliche Intelligenz, Prozessautomatisierung.
+
+## Zielgruppe
+
+Kleine und mittelständische Unternehmen (KMU) in München, Bayern und deutschlandweit, die ihre Digitalisierung vorantreiben, datengetrieben arbeiten oder KI einsetzen möchten.
+
+## Über Julio Benjamin Brinkmann
+
+IT-Berater und Gründer mit über 14 Jahren Erfahrung in Datenanalyse, Beratung und Projektmanagement. Spezialisiert auf die Schnittstelle von Daten, Prozessen und KI.
